@@ -13,7 +13,9 @@ my_dict.update({'Neptune':2869000000, 'Pluto':4496000000})
 print (my_dict)
 
 print ('Пум-пум-пум, Плутон давно лишён статуса планеты, поэтому удалим его из этой небольшой базы данных')
-del my_dict['Pluto']
+Dishonored = my_dict.pop('Pluto')
+print ('\n')
+print(Dishonored, ' км до самой далёкой карликовой планеты солнечной системы')
 print (my_dict)
 
 #Множества
