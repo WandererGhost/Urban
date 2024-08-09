@@ -6,7 +6,10 @@ length_of_my_list = len(my_list) - 1 #Длина списка считает э�
 #Чтобы программа могла сравнивать длину списка с меняющимся индексом, то нужно привести длину списка к тому же значению, что и последний индекс в списке
 tracker = 0
 while tracker <= length_of_my_list:
-    if my_list[tracker] >= 0:
+    if my_list[tracker] == 0:
+        tracker = tracker + 1
+        continue
+    elif my_list[tracker] > 0:
         print (my_list[tracker])
         tracker = tracker + 1
         continue
