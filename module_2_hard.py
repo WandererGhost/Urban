@@ -27,7 +27,9 @@ def checking_second_num():
 while a < n:
     checking_second_num()
     a = a + 1
-#result_clean = len(key)//2       От этой схемы пришлось отказаться
-#result_clean = key[:result_clean]
 
-print(n, '=', *key)
+n = str(n)
+key = list(map(str, key))
+key = ' '.join(key)
+key = key.replace(' ', '')
+print (n,'-', key)
