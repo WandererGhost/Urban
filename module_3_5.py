@@ -9,3 +9,5 @@ def get_multiplied_digits(number):
 
 result = get_multiplied_digits(23)
 print(result)
+
+#Почему если я убираю конструкцию if - else, то код ломается?
