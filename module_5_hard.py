@@ -92,31 +92,30 @@ class UrTube:
         for key in self.videos:
             if search_word in key.lower():
                 search.append(key)
-
-        print(search)
+        return f'{search}'
 
     def watch_video(self, title):
         from time import sleep
         if title not in self.videos:
             print('Данного видео не существует') # Данная запись показывает, что программа работает
             # но не проходит дальше этого пункта.
-            exit()
+            return
         else:
             inform_video = self.videos[title]
         if self.current_user is None:
             print('Войдите в аккаунт, чтобы смотреть видео')
-            exit()
+            return
         else:
             inform_user = self.users[self.current_user]
 
         if inform_video[1] == True:
             if inform_user[1] is None:
                 print('Не хватает информации о пользователе для доступа к данному видео')
-                exit()
+                return
             else:
                 if inform_user[1] < 18:
                     print('Вам нет 18 лет, пожалуйста, покиньте страницу')
-                    exit()
+                    return
         for i in range(1, inform_video[0] + 1):
             sleep(1)
             print(i, end=' ')
@@ -153,7 +152,7 @@ ur.register('urban_pythonist', 'iScX4vIJClb9YQavjAgF', 25)
 ur.watch_video('Для чего девушкам парень программист?')
 
 # Строка от себя на проверку работы запроса возраста от пользователя:
-ur.register('Wanderer', 'iScX4vI')
+# ur.register('Wanderer', 'iScX4vI')
 
 # Проверка входа в другой аккаунт
 ur.register('vasya_pupkin', 'F8098FM8fjm9jmi', 55)
