@@ -52,3 +52,6 @@ finder2 = WordsFinder('test_file.txt', 'test_file_2.txt')
 print(finder2.get_all_words()) # Все слова
 print(finder2.find('TEXT')) # 3 слово по счёту
 print(finder2.count('teXT')) # 4 слова teXT в тексте всего
+
+# Для проверки корректной работы добавлен второй текстовый файл.
+# Правильные значения: find = 7, count = 1
